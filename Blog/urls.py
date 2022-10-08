@@ -19,5 +19,6 @@ from posts import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',views.index)
+    path('',views.index),
+    path('<int:post_id>/',views.post_detail,name='post_detail')
 ]
