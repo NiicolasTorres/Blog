@@ -24,4 +24,5 @@ urlpatterns = [
     path('',views.index,name='index'),
     path('<int:post_id>/',views.post_detail,name='post_detail'),
     path('',include('login.urls')),
+    path('post/',views.post, name='post')
 ]

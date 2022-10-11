@@ -94,8 +94,9 @@
     {% for publicacion in post %}
 
 
-
+    <h2 class="username"><a href="{% url 'profile' post %}"></a>{{username}}</h2>
     <h1>{{ publicacion.title }}</h1>
+  
     <p class="lead">{{ publicacion.content | slice:":50" }}</p>
     <a class="btn btn-lg btn-primary" href="{% url 'post_detail' publicacion.id %}" role="button">Ver post &raquo;</a>
 

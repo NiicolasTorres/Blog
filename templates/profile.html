@@ -1,0 +1,9 @@
+{% extend'index' %}
+
+{% block content %}
+<div class="profile">
+   <img src="C:/Users/Bardiel/Desktop/Blog/static/Morgoth.jpg">
+   <h2>@{{user.username}}</h2>
+</div>
+<p>{{ user.post.count }}</p>
+{% endblock %}
