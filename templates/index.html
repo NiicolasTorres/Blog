@@ -1,3 +1,4 @@
+{% extends 'base.html' %}
 {% load static%}
 <!doctype html>
 <html lang="en">
@@ -7,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.104.2">
-    <title>Top navbar example · Bootstrap v5.2</title>
+    <title>{% block title %} Inicio {% endblock %}</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/navbar-static/">
 
@@ -85,29 +86,7 @@
     <link href="navbar-top.css" rel="stylesheet">
   </head>
   <body>
-    
-<nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">Top navbar</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarCollapse">
-      <ul class="navbar-nav me-auto mb-2 mb-md-0">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="https://www.youtube.com/watch?v=_SBQvd6vY9s"target="_blank" rel="noopener noreferrer">Youtube</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="https://www.instagram.com/reel/CiX_IWwqbkI/?igshid=MDJmNzVkMjY%3D" target="_blank" rel="noopener noreferrer">Instagram</a>
-        </li>
-      </ul>
-      
-    </div>
-  </div>
-</nav>
+    {% block content %} 
 
 <main class="container">
   <div class="bg-light p-5 rounded">
@@ -128,6 +107,6 @@
 
     <script src="{% static 'js/bootstrap.bundle.min.js' %}" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
 
-      
+    {% endblock %}
   </body>
 </html>

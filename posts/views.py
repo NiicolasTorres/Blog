@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponseRedirect
 from .models import Post
 from .forms import CommentForm
+from django.shortcuts import redirect
 
 
 # Create your views here.
@@ -23,7 +24,7 @@ def post_detail(request,post_id):
             new_form = form.save(commit=False)
             new_form.post = post
             new_form.save()
-            return HttpResponseRedirect('')
+            return redirect('post_detail',post_id= post_id)
 
     else:
         form = CommentForm
