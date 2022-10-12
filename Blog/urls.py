@@ -16,6 +16,7 @@ Including another URLconf
 import imp
 from django.contrib import admin
 from django.urls import path
+from login import urls
 from posts import views
 from django.urls import path,include
 
@@ -24,5 +25,6 @@ urlpatterns = [
     path('',views.index,name='index'),
     path('<int:post_id>/',views.post_detail,name='post_detail'),
     path('',include('login.urls')),
-    path('post/',views.post, name='post')
+    path('post/',views.post, name='post'),
+    path('',include('djangochat.urls')),
 ]
